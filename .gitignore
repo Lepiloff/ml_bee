@@ -6,6 +6,7 @@ __pycache__
 /app/wsgi.py
 /app/error.log
 /app/bee.sock
+obj.data
 .ini
 /app/config.py
 .DS_Store
