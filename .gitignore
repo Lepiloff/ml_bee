@@ -1,0 +1,19 @@
+*.pyc
+*~
+__pycache__
+/app/upload
+/upload
+/app/wsgi.py
+/app/error.log
+/app/bee.sock
+.ini
+/app/config.py
+.DS_Store
+.idea
+*.jpg
+*.JPG
+# Neural Network weights
+*.weights
+*.pt
+*.onnx
+*.mlmodel
