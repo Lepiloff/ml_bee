@@ -12,7 +12,6 @@ class Images(db.Model):
     img_filename = db.Column(db.String())
     counter = db.Column(db.Integer(), default=0)
     img_data = db.Column(db.String(264), unique=False)
-    creation_date = db.Column(db.DateTime, default=datetime.now())
     imagegroup_id = db.Column(db.Integer, db.ForeignKey('imagegroup.id', ondelete='CASCADE'), nullable=False)
     imagegroup = db.relationship('ImageGroup', backref=db.backref('images', lazy=True))
 
@@ -29,6 +28,7 @@ class ImageSchema(ma.Schema):
     id = fields.Integer()
     img_filename = fields.String(required=True)
     counter = fields.Integer()
+
 
 images_schema = ImageSchema(many=True)
 image_schema = ImageSchema()

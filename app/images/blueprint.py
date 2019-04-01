@@ -26,8 +26,8 @@ def allowed_file(filename):
 @images.route("/result/<int:imagegroup>")
 def results(imagegroup):
     #imagegroup = imagegroup
-    images = Images.query.filter_by(imagegroup_id=imagegroup).all()
-    result = images_schema.dump(images, many=True)
+    images = Images.query.filter_by(imagegroup_id=imagegroup).first()
+    result = image_schema.dump(images)
     return jsonify({'images': result.data})
 
 

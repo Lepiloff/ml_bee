@@ -2,51 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-
+    <title>Main</title>
 </head>
 <body>
-
-
-
-
-<div id="loading"></div>
-    <div id="content">
-        {% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-      <li>{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
+    <div id="content">        
         <div class="my">
-        <h1>Please upload images:</h1>
-            </div>
-        <p>
-        <form action="." method="POST" enctype=multipart/form-data>
-        <input type=file name=file>
-      <input type="submit" name="anything_submit" value="Submit" onclick="loading();">
-        </form>
-        </p>
+        <a href="http://www.animatedimages.org/cat-bees-185.htm"><img src="http://www.animatedimages.org/data/media/185/animated-bee-image-0026.gif" border="0" alt="animated-bee-image-0026" /></a>
+        </div>        
     </div>
 
-
-
-
-
-
-
-
-<script type="text/javascript">// <![CDATA[
-        function loading(){
-            $("#loading").show();
-            $("#content").hide();
-        }
-// ]]></script>
 </body>
 
 </html>
